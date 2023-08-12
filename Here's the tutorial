@@ -1,0 +1,109 @@
+here's the tutorial
+
+Cleaning Windows 11 and optimizing your graphics card are separate tasks. Here's a simple outline for both:
+
+**Cleaning Windows 11:**
+Cleaning Windows involves removing unnecessary files and optimizing settings.
+
+```python
+import os
+import shutil
+
+# Delete temporary files
+temp_folders = ['C:\\Windows\\Temp', 'C:\\Users\\<YourUsername>\\AppData\\Local\\Temp']
+for folder in temp_folders:
+    try:
+        shutil.rmtree(folder)
+        print(f"Deleted: {folder}")
+    except Exception as e:
+        print(f"Error deleting {folder}: {e}")
+
+# Clear Windows update cache
+try:
+    os.system('DISM.exe /Online /Cleanup-Image /StartComponentCleanup /ResetBase')
+    print("Windows update cache cleared.")
+except Exception as e:
+    print(f"Error clearing Windows update cache: {e}")
+
+# Disable startup programs
+startup_folder = 'C:\\Users\\<YourUsername>\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
+for file in os.listdir(startup_folder):
+    try:
+        os.remove(os.path.join(startup_folder, file))
+        print(f"Removed startup item: {file}")
+    except Exception as e:
+        print(f"Error removing startup item: {e}")
+```
+
+**Optimizing Graphics Card:**
+Optimizing your graphics card might involve updating drivers and adjusting settings.
+
+```python
+# Install/update graphics drivers
+# You might need to specify your graphics card model and download the appropriate drivers from the manufacturer's website.
+
+# Adjust graphics settings
+# You can use tools like Nvidia Control Panel or AMD Radeon Settings to adjust graphics settings for performance.
+# Some common settings include setting power management to maximum performance and adjusting anti-aliasing settings.
+
+# Monitor temperature and usage
+# You can use third-party tools like MSI Afterburner or GPU-Z to monitor temperature and usage of your graphics card.
+
+# Clean the graphics card physically
+# Dust can accumulate on the graphics card's cooler and fans, leading to higher temperatures. Gently clean them if needed.
+```
+
+Please note that these code snippets provide a basic outline and may need adjustments based on your system configuration and requirements. Also, be cautious when making changes to your system settings.Cleaning Windows 11 and optimizing your graphics card are separate tasks. Here's a simple outline for both:
+
+**Cleaning Windows 11:**
+Cleaning Windows involves removing unnecessary files and optimizing settings.
+
+```python
+import os
+import shutil
+
+# Delete temporary files
+temp_folders = ['C:\\Windows\\Temp', 'C:\\Users\\<YourUsername>\\AppData\\Local\\Temp']
+for folder in temp_folders:
+    try:
+        shutil.rmtree(folder)
+        print(f"Deleted: {folder}")
+    except Exception as e:
+        print(f"Error deleting {folder}: {e}")
+
+# Clear Windows update cache
+try:
+    os.system('DISM.exe /Online /Cleanup-Image /StartComponentCleanup /ResetBase')
+    print("Windows update cache cleared.")
+except Exception as e:
+    print(f"Error clearing Windows update cache: {e}")
+
+# Disable startup programs
+startup_folder = 'C:\\Users\\<YourUsername>\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'
+for file in os.listdir(startup_folder):
+    try:
+        os.remove(os.path.join(startup_folder, file))
+        print(f"Removed startup item: {file}")
+    except Exception as e:
+        print(f"Error removing startup item: {e}")
+```
+
+**Optimizing Graphics Card:**
+Optimizing your graphics card might involve updating drivers and adjusting settings.
+
+```python
+# Install/update graphics drivers
+# You might need to specify your graphics card model and download the appropriate drivers from the manufacturer's website.
+
+# Adjust graphics settings
+# You can use tools like Nvidia Control Panel or AMD Radeon Settings to adjust graphics settings for performance.
+# Some common settings include setting power management to maximum performance and adjusting anti-aliasing settings.
+
+# Monitor temperature and usage
+# You can use third-party tools like MSI Afterburner or GPU-Z to monitor temperature and usage of your graphics card.
+
+# Clean the graphics card physically
+# Dust can accumulate on the graphics card's cooler and fans, leading to higher temperatures. Gently clean them if needed.
+```
+
+Please note that these code snippets provide a basic outline and may need adjustments based on your system configuration and requirements. Also, be cautious when making changes to your system settings.
